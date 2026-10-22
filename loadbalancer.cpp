@@ -25,7 +25,8 @@ request loadbalancer::getRequest()
 {
    incTime();
    if (!requestQueue.empty()) {
-      request r = requestQueue.front();
+      // request r = requestQueue.front();
+      request r = requestQueue.top();
       return r;
    }
    // ignore warning here about no return value

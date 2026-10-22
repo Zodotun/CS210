@@ -73,7 +73,7 @@ int main()
       // every random set of time, or get a new request
       if (rand() % 10 == 0) {
          request r = createRandomRequest();
-         // request r = requestQueue.top();
+
          lb.addRequest(r);
       }
       lb.incTime();
