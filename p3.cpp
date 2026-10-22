@@ -68,11 +68,12 @@ int main()
          cout << endl;
 		 
          // then give it a new request
-         
+         webarray[currTime % NUM_SERVERS].addRequest(lb.getRequest(), currTime);
       }
       // every random set of time, or get a new request
       if (rand() % 10 == 0) {
          request r = createRandomRequest();
+         // request r = requestQueue.top();
          lb.addRequest(r);
       }
       lb.incTime();
